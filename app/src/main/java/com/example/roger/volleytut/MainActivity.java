@@ -36,14 +36,14 @@ public class MainActivity extends ActionBarActivity {
 
        // mRequestQueue = Volley.newRequestQueue(this);
        //
-        String url = "http://chopchopcode.com/android/memberReg.php/?user=calvin";
-       // String url = "http://echo.jsontest.com/title/ipsum/content/blah";
+        //String url = "http://chopchopcode.com/android/memberReg.php/?user=calvin";
+        String url = "http://echo.jsontest.com/title/ipsum/content/blah";
 
         final String imgurl = "http://i.imgur.com/7spzG.png";
 
-        GsonRequest<Post[]> gsonRequest = new GsonRequest<>(url,Post[].class,new Response.Listener<Post[]>() {
+        GsonRequest<Dummy> gsonRequest = new GsonRequest<>(url,Dummy.class,new Response.Listener<Dummy>() {
             @Override
-            public void onResponse(Post[] response) {
+            public void onResponse(Dummy response) {
 //                tv.setText(String.valueOf(response.length));
                 tv.setText(String.valueOf(response.toString()));
 
